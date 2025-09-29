@@ -15,11 +15,4 @@ export class SearchComponent {
     this.seacherTextCahnge.emit(this.searchText);
   }
 
-  setSearchText(text: string) {
-    this.searchText = text;
-  }
-
-  // updateSearchText(event: any) {
-  //   this.searchText = event.target.value;
-  // }
 }
