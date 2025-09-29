@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'product-list',
@@ -604,6 +604,9 @@ export class ProductListComponent {
   tottalOutOfStock = this.products.filter((product) => !product.is_in_inventory).length;
 
   selectFilterRadion: string = 'all';
+
+  @Input()
+  searchText: string = '';
 
   onFilterChange(value: string){
     this.selectFilterRadion = value;

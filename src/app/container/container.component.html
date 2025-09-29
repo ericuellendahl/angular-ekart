@@ -21,7 +21,7 @@
   <button [disabled]="!(product.inStock > 0)">By Now</button>
   <input (input)="onNameChange($event)" />
   <p>Name: {{ name }}</p> -->
-  <app-search></app-search>
-  <product-list></product-list>
+  <app-search (seacherTextCahnge)="setSearchText($event)"></app-search>
+  <product-list [searchText]="searchText"></product-list>
   
 </div>
